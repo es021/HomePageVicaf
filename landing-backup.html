@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Landing Page | Seeds Job Fair</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="https://seedsjobfairapp.com/wp-content/uploads/2017/04/cropped-icon-32x32.png"
+		sizes="32x32" />
+	<link rel="icon" href="https://seedsjobfairapp.com/wp-content/uploads/2017/04/cropped-icon-192x192.png"
+		sizes="192x192" />
+	<link rel="apple-touch-icon-precomposed"
+		href="https://seedsjobfairapp.com/wp-content/uploads/2017/04/cropped-icon-180x180.png" />
+	<meta name="msapplication-TileImage"
+		content="https://seedsjobfairapp.com/wp-content/uploads/2017/04/cropped-icon-270x270.png" />
+	<meta name="description" content="Virtual Career Fair - Powered by Seeds Job Fair - Innovaseeds Solutions" />
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-7802366653068987",
+			enable_page_level_ads: true
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div>
+		<h2>Seeds Job Fair</h2>
+		<h4>Landing Page</h4>
+		<p>Welcome to Seeds Job Fair</p>
+		<div id="SC_TBlock_654643" class="SC_TBlock">loading...</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+
+	<script>
+		jQuery(document).ready(function () {
+			var isProd = location.host.indexOf("localhost") <= -1;
+			console.log("location.host", location.host);
+			console.log("isProd", isProd);
+
+			function sendRequest() {
+				var API_URL = isProd ?
+					"https://seedsjobfairapp.com/cf/add-log/" :
+					"http://localhost:4000/add-log/";
+
+				jQuery.ajax({
+					url: API_URL,
+					method: "POST",
+					data: {
+						event: "landing.html",
+						data: "landing.html",
+					},
+					success: function (res) {
+						console.log(res);
+					},
+					error: function (err) {
+						console.log(err);
+					}
+				})
+			}
+
+			sendRequest();
+		});
+	</script>
+	<script type="text/javascript">
+		(sc_adv_out = window.sc_adv_out || []).push({
+			id: "654643",
+			domain: "n.ads3-adnow.com"
+		});
+	</script>
+	<script type="text/javascript" src="//st-n.ads3-adnow.com/js/a.js"></script>
+</body>
+
+</html>
