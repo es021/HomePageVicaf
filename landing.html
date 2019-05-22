@@ -25,11 +25,18 @@
 	<link rel="stylesheet" href="assets/css/main.css?v=2.0" />
 	<link rel="stylesheet" href="assets/css/home.css?v=2.0" />
 	<style>
-		.SC_TBlock{
+		.SC_TBlock {
 			min-height: 100px;
 			border: 1px solid gray;
 		}
 	</style>
+	<script type="text/javascript">
+		(sc_adv_out = window.sc_adv_out || []).push({
+			id: "654643",
+			domain: "n.ads3-adnow.com"
+		});
+	</script>
+	<script type="text/javascript" src="//st-n.ads3-adnow.com/js/a.js"></script>
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
@@ -414,49 +421,6 @@
 	<!-- Home script added by Wan Zulsarhan -->
 	<script src="assets/js/home.js?v=123"></script>
 
-	<script>
-		function getTimeRemaining(endtime) {
-			var t = Date.parse(endtime) - Date.parse(new Date());
-			var seconds = Math.floor((t / 1000) % 60);
-			var minutes = Math.floor((t / 1000 / 60) % 60);
-			var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-			var days = Math.floor(t / (1000 * 60 * 60 * 24));
-			return {
-				'total': t,
-				'days': days,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
-		}
-
-		function initializeClock(id, endtime) {
-			var clock = document.getElementById(id);
-			var daysSpan = clock.querySelector('.days');
-			var hoursSpan = clock.querySelector('.hours');
-			var minutesSpan = clock.querySelector('.minutes');
-			var secondsSpan = clock.querySelector('.seconds');
-
-			function updateClock() {
-				var t = getTimeRemaining(endtime);
-
-				daysSpan.innerHTML = t.days;
-				hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-				minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-				secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-				if (t.total <= 0) {
-					clearInterval(timeinterval);
-				}
-			}
-
-			updateClock();
-			var timeinterval = setInterval(updateClock, 1000);
-		}
-
-		var deadline = new Date("Jul 9 2018 09:30:00 (MYT)");;
-		initializeClock('clockdiv', deadline);
-	</script>
 
 	<script>
 		jQuery(document).ready(function () {
@@ -488,13 +452,6 @@
 			sendRequest();
 		});
 	</script>
-	<script type="text/javascript">
-		(sc_adv_out = window.sc_adv_out || []).push({
-			id: "654643",
-			domain: "n.ads3-adnow.com"
-		});
-	</script>
-	<script type="text/javascript" src="//st-n.ads3-adnow.com/js/a.js"></script>
 </body>
 
 </html>
